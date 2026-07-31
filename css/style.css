@@ -74,11 +74,45 @@ header .container{
     padding:15px 0;
 }
 
-.logo img{
+.logo{
 
-    height:70px;
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
 }
 
+.logo img{
+
+    height:65px;
+
+}
+
+.logo-text h1{
+
+    color:#fff;
+
+    font-size:1.5rem;
+
+    margin:0;
+
+    line-height:1.2;
+
+}
+
+.logo-text p{
+
+    color:#d7e8ff;
+
+    margin-top:3px;
+
+    font-size:.9rem;
+
+    letter-spacing:1px;
+
+}
 nav ul{
 
     display:flex;
