@@ -385,7 +385,29 @@ a:hover{
 
 @media(max-width:768px){
 
-header .container{
+header .container{.logo{
+
+    justify-content:center;
+
+}
+
+.logo img{
+
+    height:50px;
+
+}
+
+.logo-text h1{
+
+    font-size:1.2rem;
+
+}
+
+.logo-text p{
+
+    font-size:.8rem;
+
+}
 
     flex-direction:column;
 
