@@ -519,20 +519,21 @@ nav a:hover::after{
 
 .business-card{
 
-    background:#ffffff;
+    background:rgba(255,255,255,.93);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.6);
 
     border-radius:18px;
 
-    padding:35px 30px;
-
-    text-align:center;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    padding:35px;
 
     transition:.35s;
 
-}
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
 
+}
 .business-card:hover{
 
     transform:translateY(-8px);
