@@ -110,12 +110,13 @@ header{
 
     z-index:999;
 
-    background:#ffffff;
+    background:rgba(255,255,255,.95);
 
-    box-shadow:0 3px 18px rgba(0,0,0,.08);
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 2px 18px rgba(0,0,0,.08);
 
 }
-
 .header-inner{
 
     display:flex;
