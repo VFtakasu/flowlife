@@ -255,28 +255,31 @@ nav a:hover{
 
     display:inline-block;
 
+    padding:16px 45px;
+
     background:#fff;
 
     color:#0B4E97;
 
-    padding:15px 40px;
-
     border-radius:40px;
-
-    text-decoration:none;
 
     font-weight:bold;
 
-    transition:.3s;
+    text-decoration:none;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
 }
 
 .btn:hover{
 
-    transform:translateY(-3px);
+    background:#f3f8ff;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transform:translateY(-4px);
+
 }
-
 /* ---------- テーブル ---------- */
 
 table{
