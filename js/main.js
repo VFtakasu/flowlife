@@ -123,5 +123,41 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     });
+    /* ===============================
+       ページトップボタン
+    =============================== */
 
+    const pageTop = document.getElementById("page-top");
+
+    if (pageTop) {
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 300) {
+
+                pageTop.classList.add("show");
+
+            } else {
+
+                pageTop.classList.remove("show");
+
+            }
+
+        });
+
+        pageTop.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+    }
 });
