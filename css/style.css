@@ -142,31 +142,113 @@ nav a:hover{
 
 .hero{
 
-    background:linear-gradient(135deg,#0B4E97,#2D7DD2);
+    background:
+    linear-gradient(
+    135deg,
+    #0B4E97,
+    #2D7DD2);
 
     color:#fff;
 
+    position:relative;
+
+    overflow:hidden;
+
     text-align:center;
 
-    padding:130px 20px;
+    padding:120px 20px;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:50%;
+
+    right:-220px;
+
+    top:-220px;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:50%;
+
+    left:-120px;
+
+    bottom:-120px;
+
+}
+
+.hero-overlay{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-logo{
+
+    width:170px;
+
+    margin:25px auto;
+
+    display:block;
+
+    filter:drop-shadow(0 8px 18px rgba(0,0,0,.25));
+
+}
+
+.since{
+
+    font-size:1.2rem;
+
+    letter-spacing:4px;
+
+    opacity:.85;
+
+    margin-bottom:10px;
+
 }
 
 .hero h1{
 
     font-size:3rem;
 
-    margin-bottom:20px;
+    margin-bottom:25px;
 
-    font-weight:700;
 }
 
-.hero p{
+.lead{
 
-    font-size:1.2rem;
+    font-size:1.3rem;
 
-    margin-bottom:35px;
+    line-height:2;
+
+    margin-bottom:40px;
+
 }
-
 /* ---------- ボタン ---------- */
 
 .btn{
