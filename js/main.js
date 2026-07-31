@@ -1,51 +1,27 @@
-/* =====================================
+/* ==========================================
    株式会社フローライフ
    main.js
-===================================== */
+========================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     /* ===============================
-       スムーズスクロール
+       スクロールフェードイン
     =============================== */
 
-    const links = document.querySelectorAll('a[href^="#"]');
+    const targets = document.querySelectorAll(
+        ".profile-item, .business-card, .partner-card, .contact-item"
+    );
 
-    links.forEach(link => {
-
-        link.addEventListener("click", function(e){
-
-            const target = document.querySelector(this.getAttribute("href"));
-
-            if(target){
-
-                e.preventDefault();
-
-                window.scrollTo({
-
-                    top: target.offsetTop - 70,
-
-                    behavior: "smooth"
-
-                });
-
-            }
-
-        });
-
+    targets.forEach(target => {
+        target.classList.add("hidden");
     });
 
-    /* ===============================
-       スクロール時フェードイン
-    =============================== */
+    const observer = new IntersectionObserver((entries) => {
 
-    const sections = document.querySelectorAll(".section");
+        entries.forEach(entry => {
 
-    const observer = new IntersectionObserver((entries)=>{
-
-        entries.forEach(entry=>{
-
-            if(entry.isIntersecting){
+            if (entry.isIntersecting) {
 
                 entry.target.classList.add("show");
 
@@ -53,17 +29,98 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-    },{
+    }, {
+        threshold: 0.15
+    });
 
-        threshold:0.15
+    targets.forEach(target => observer.observe(target));
+
+
+
+    /* ===============================
+       スムーズスクロール
+    =============================== */
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+        anchor.addEventListener("click", function (e) {
+
+            const target = document.querySelector(this.getAttribute("href"));
+
+            if (!target) return;
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        });
 
     });
 
-    sections.forEach(section=>{
 
-        section.classList.add("hidden");
 
-        observer.observe(section);
+    /* ===============================
+       ヘッダーメニュー現在位置
+    =============================== */
+
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const top = section.offsetTop - 120;
+            const height = section.offsetHeight;
+
+            if (window.scrollY >= top &&
+                window.scrollY < top + height) {
+
+                current = section.getAttribute("id");
+
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + current) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+
+
+    /* ===============================
+       ヘッダー縮小
+    =============================== */
+
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 80) {
+
+            header.classList.add("shrink");
+
+        } else {
+
+            header.classList.remove("shrink");
+
+        }
 
     });
 
