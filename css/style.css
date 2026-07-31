@@ -1073,3 +1073,38 @@ transform:scale(1.1);
 background:#2D7DD2;
 
 }
+/* ==========================
+   お問い合わせ案内
+========================== */
+
+.contact-message{
+
+    text-align:center;
+
+    font-size:1.1rem;
+
+    line-height:2;
+
+}
+
+.contact-message strong{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:12px 24px;
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    border-radius:30px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:#fff;
+
+}
