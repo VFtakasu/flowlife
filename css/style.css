@@ -234,14 +234,24 @@ nav a:hover::after{
 
     background:
 
-    linear-gradient(135deg,#0B4E97,#2D7DD2);
+    linear-gradient(
+        rgba(11,78,151,.75),
+        rgba(11,78,151,.75)
+    ),
+
+    url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
 
     color:#fff;
 
     padding:120px 0 170px;
 
 }
-
 .hero-overlay{
 
     position:relative;
