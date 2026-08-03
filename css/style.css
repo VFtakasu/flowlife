@@ -236,7 +236,7 @@ nav a:hover::after{
 
     overflow:hidden;
 
-    min-height:640px;
+    min-height:720px;
 
     display:flex;
 
@@ -273,12 +273,79 @@ nav a:hover::after{
 
 .hero-simple{
 
-    max-width:760px;
+    max-width:820px;
 
-    padding:90px 0;
+    margin:0 auto;
+
+    text-align:center;
+
+    padding:140px 20px 120px;
+}
+.hero-en{
+
+    font-size:1rem;
+
+    letter-spacing:4px;
+
+    color:#dbe8ff;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
 
 }
 
+.hero-since{
+
+    display:inline-block;
+
+    padding:8px 20px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.18);
+
+    margin-bottom:30px;
+
+}
+
+.hero-title{
+
+    font-size:3.3rem;
+
+    font-weight:700;
+
+    line-height:1.4;
+
+    margin-bottom:18px;
+
+}
+
+.hero-company{
+
+    font-size:2rem;
+
+    font-weight:500;
+
+    color:#eef5ff;
+
+    margin-bottom:35px;
+
+}
+
+.hero-text{
+
+    max-width:700px;
+
+    margin:0 auto 50px;
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+    color:#eef3fb;
+
+}
 .hero-company{
 
     font-size:1.25rem;
@@ -348,12 +415,13 @@ nav a:hover::after{
 
     display:flex;
 
+    justify-content:center;
+
     gap:18px;
 
     flex-wrap:wrap;
 
 }
-
 .btn{
 
     display:inline-flex;
@@ -362,7 +430,7 @@ nav a:hover::after{
 
     justify-content:center;
 
-    min-width:180px;
+    min-width:200px;
 
     height:54px;
 
