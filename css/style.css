@@ -283,9 +283,10 @@ nav a:hover::after{
 }
 .hero-en{
 
-    font-size:1rem;
+    font-size:0.85rem;
 
-    letter-spacing:4px;
+    letter-spacing:3px;
+   opacity:.8;
 
     color:#dbe8ff;
 
